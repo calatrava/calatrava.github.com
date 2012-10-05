@@ -3,78 +3,144 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Calatrava by calatrava</title>
-
+    <title>Calatrava</title>
+    <link rel="icon" href="/images/favicon.png">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, max-scale=1">
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="homepage">
     <div class="wrapper">
       <header>
-        <h1>Calatrava</h1>
-        <p>A cross-platform mobile framework with the freedom to build
-        great UIs, from <a href="http://join.thoughtworks.com">ThoughtWorks</a>.</p>
-        <p class="view"><a href="https://github.com/calatrava/calatrava">View the Project on GitHub <small>calatrava</small></a></p>
-        <ul>
-          <li class="single"><a href="https://github.com/calatrava/calatrava">View On <strong>GitHub</strong></a></li>
-        </ul>
+        <hgroup id="home-branding">
+          <h1>Calatrava</h1>
+          <h2><img src="/images/calatrava-logo.png" alt="Calatrava Logo Lockup" /></h2>
+          <p>Mobile cross-platform logic. Freedom to build native UI.</p>
+        </hgroup>
+
+        <pre><code class="gem-install">$ gem install calatrava</code></pre>
+
+        <hr>
+
+        <nav>
+          <ul>
+            <li><a href="https://github.com/calatrava/calatrava">GitHub</a></li>
+            <li><a href="https://github.com/calatrava/wiki">Docs</a></li>
+            <li><a href="https://groups.google.com/d/forum/calatrava-mobile">Google Groups</a></li>
+          </ul>
+        </nav>
       </header>
       <section>
-        <h1>What?</h1>
+        <article>
+          <p>
+            Calatrava is a cross-platform mobile framework that lets you share
+            the core logic of your application across iOS, Android and Mobile
+            Web, but unlike other XP toolkits it allows you to always write the
+            highest quality native UI you need.
+            Read the <a href="http://overwatering.org/blog/2012/10/announcing-calatrava/">announcement</a>
+            for more detail.
+          </p>
+                  <p>
+          Calatrava is maintained by <a href="https://github.com/gga" class="user-mention">@gga</a>,
+          based on an idea from <a href="https://github.com/moredip" class="user-mention">@moredip</a>.
 
-<p>Calatrava is a cross-platform mobile framework that lets you share
-  the core logic of your application across iOS, Android and Mobile
-  Web, but unlike other XP toolkits it allows you to always write the
-  highest quality native UI you need.</p>
+          Developed with the support of <a href="http://www.thoughtworks.com/">ThoughtWorks</a>,
+          the custom software experts, and my employer.
+        </p>
+        </article>
 
-<p>Read
-the <a href="http://overwatering.org/blog/2012/10/announcing-calatrava/">announcement</a>
-for more detail</p>
+<hr>
 
-<h1>How?</h1>
-
-<p>
+<article id="getting-started">
+<h2>Getting Started</h2>
 <ol>
-<li>Write your app as a single-page mobile web app. Use CoffeeScript
-  for all the logic. Separate your UI from your logic.</li>
+<li>
+  <span>Write your feature in javascript or coffeescript.</span>
 
-<li>Calatrava will build native iOS and Android apps with an HTML
-  UI.</li>
+  <figure>
+    <pre><code>$(document).ready ->
+  $('.your_feature').on('click', ->
 
-<li>Upgrade single individual screens to hand-crafted native UIs on
-  iOS or Android, as needed.</li>
+  # All logic in 1-place.
+  # In a single language.
 
-<li>App features remain in sync across all platforms.</li>
+  # Allows you to pivot on your logic.
+  # Without going broke.
 
-<li>Profit!</li>
+  )</code><pre></figure>
+</li><li>
+  <span>Author your inital UI with html, css and js.</span>
 
+  <figure><pre><code>&lt;html&gt;
+
+&lt;h1&gt;Your App&lt;&#47;h1&gt;
+
+&lt;p&gt;Get your idea up and running quickly in html.&lt;&#47;p&gt;
+&lt;p&gt;Upgrade this feature with native ui.&lt;&#47;p&gt;
+
+&lt;strong&gt;NO handcuffing ui-framework.&lt;&#47;strong&gt;
+
+&lt;&#47;html&gt;</code>
+    <pre>
+  </figure>
+</li><li>
+  <span>Upgrade inidividual views to native UI.</span>
+  <figure>
+    <pre><code>#import &lt;UIKit/UIKit.h&gt;
+
+@interface MyAPPCollectButton : UIView {
+
+- (void) setCollected:(BOOL)collected;
+- (void) didTapCollected:(BasicCallback)callback;
+- (void) showCollectingFeedbackUI:(BOOL)showFeebackUI;
+
+@end</code><pre>
+</figure>
+</li>
 </ol>
-</p>
+</article><!-- end #getting-started -->
 
-<h2>Mailing List</h2>
+<hr>
+        <article id="key-points">
+          <h2>Key Points</h2>
 
-<p>
-There's a mailing list
-on <a href="https://groups.google.com/d/forum/calatrava-mobile">Google
-Groups</a>. Please jump in, it's a new project and documentation is
-sparse.
-</p>
+          <ul>
+            <li>Calatrava is about shared <strong>logic</strong>.
+            <li>Calatrava is <strong>not</strong> about sharing UI.
+            <li>Write your app as a single-page mobile web app.
+            <li>Use CoffeeScript for all the logic.
+            <li>Separate your UI from your logic.
+            <li>App features remain in sync across all platforms.
+            <li>Upgrade web UI to native immediately or as constraints allow.
+            <li>No handcuffing UI frameworks.
+          </ul>
+        </article>
 
-<h2>Contributors</h2>
-
-<p>Maintained by <a href="https://github.com/gga" class="user-mention">@gga</a>, based on an idea from <a href="https://github.com/moredip" class="user-mention">@moredip</a>. Developed with the support of <a href="http://www.thoughtworks.com/">ThoughtWorks</a>, the custom software experts, and my employer. Like what you see here? Want us to <a href="http://www.thoughtworks.com/">work with you</a>? Or do you want to <a href="http://join.thoughtworks.com/">work with us</a>?</p>
+        <hr>
       </section>
-    </div>
+
     <footer>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+      <p>
+        Like what you see here?
+        <br />
+        Want ThoughtWorks to <a href="http://www.thoughtworks.com/">work with you</a>?
+        Or do you want to <a href="http://join.thoughtworks.com/">work with us</a>?
+      </p>
+
+      <nav>
+        <ul>
+          <li><a href="https://github.com/calatrava/calatrava">GitHub</a></li>
+          <li><a href="https://github.com/calatrava/wiki">Docs</a></li>
+          <li><a href="https://groups.google.com/d/forum/calatrava-mobile">Google Groups</a></li>
+        </ul>
+      </nav>
     </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
+  </div>
   </body>
 </html>
