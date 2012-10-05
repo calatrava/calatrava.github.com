@@ -19,8 +19,8 @@
       <header>
         <hgroup id="home-branding">
           <h1>Calatrava</h1>
-          <h2><img src="/images/calatrava-logo.png" alt="Calatrava Logo Lockup" /></h2>
-          <p>Mobile cross-platform logic. Freedom to build native UI.</p>
+          <h2><img src="images/calatrava-logo.png" alt="Calatrava Logo Lockup" /></h2>
+          <p>Mobile cross-platform logic. Freedom to build great UIs.</p>
         </hgroup>
 
         <pre><code class="gem-install">$ gem install calatrava</code></pre>
@@ -63,8 +63,8 @@
   <span>Write your feature in javascript or coffeescript.</span>
 
   <figure>
-    <pre><code>$(document).ready ->
-  $('.your_feature').on('click', ->
+    <pre><code>your.feature.controller = ({views, changePage, ajax}) ->
+  views.form.bind 'save', ->        
 
   # All logic in 1-place.
   # In a single language.
@@ -93,7 +93,7 @@
   <figure>
     <pre><code>#import &lt;UIKit/UIKit.h&gt;
 
-@interface MyAPPCollectButton : UIView {
+@interface MyAppSaveButton : UIView {
 
 - (void) setCollected:(BOOL)collected;
 - (void) didTapCollected:(BasicCallback)callback;
@@ -130,6 +130,10 @@
         <br />
         Want ThoughtWorks to <a href="http://www.thoughtworks.com/">work with you</a>?
         Or do you want to <a href="http://join.thoughtworks.com/">work with us</a>?
+      </p>
+
+      <p>
+        &copy; ThoughtWorks, Inc 2012 &mdash;
       </p>
 
       <nav>
