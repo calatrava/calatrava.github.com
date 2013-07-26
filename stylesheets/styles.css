@@ -77,16 +77,91 @@ nav a {
   padding-left: 1em;
 }
 
-@media only screen and (max-width: 1024px) {
-  /*html, body { -webkit-text-size-adjust: none; }*/
+.decision-tree {
+  margin-bottom: 20px;
 }
 
+.decision-tree img {
+  max-width: 100%;
+}
+
+
+.decision-tree-flow {
+  display: table;
+  width: 100%;
+}
+
+.decision-tree-flow p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.decision-tree-flow .answer {
+  position: relative;
+  padding: 0 40px 0 18px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #444;
+}
+
+.decision-tree-flow .answer:after {
+  content: "";
+  height: 14px;
+  width: 16px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 9px); /* yeah, that's real. */
+  background: url("/images/arrow.png") center center no-repeat;
+}
+
+.decision-tree-flow p img {
+  max-width: 140px;
+  padding-left: 1em;
+}
+
+
+@media only screen and (max-width: 1023px) {
+  .decision-tree {
+    text-align: center;
+  }
+
+  .decision-tree-flow, .decision-tree-flow p {
+    display: block;
+  }
+
+  .decision-tree-flow p {
+    width: 160px;
+    margin: 0 auto;
+  }
+
+  .decision-tree-flow .answer {
+    font-size: 2em;
+    margin: .2em auto 1.1em auto;
+    padding: 0;
+  }
+
+  .decision-tree-flow .answer:after {
+    left: calc(50% - 7px);
+    top: calc(100% + 7px);
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+
 @media only screen and (max-width: 699px) {
-  #getting-started span { min-height: 0; }
+  #getting-started span {
+    min-height: 0;
+  }
+
   #getting-started li {
     width: 100%;
     margin-bottom: 20px;
   }
+
   #key-points ul {
     -webkit-column-count: 0;
        -moz-column-count: 0;
@@ -95,6 +170,7 @@ nav a {
        -moz-column-gap: 0;
             column-gap: 0;
   }
+
 }
 
 @media only screen and (max-width: 480px) {
