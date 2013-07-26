@@ -64,7 +64,7 @@
 
   <figure>
     <pre><code>your.feature.controller = ({views, changePage, ajax}) ->
-  views.form.bind 'save', ->        
+  views.form.bind 'save', ->
 
   # All logic in 1-place.
   # In a single language.
@@ -122,6 +122,25 @@
         </article>
 
         <hr>
+
+        <article class="decision-tree">
+          <h2>Should I use Calatrava?</h2>
+          <p>Calatrava has it's sweet spot. Use the flow below to find out if Calatrava fits your needs.</p>
+
+          <figure class="decision-tree-flow">
+            <p class="question">Does your app have complex logic?</p>
+            <p class="answer">Yes</p>
+            <p class="question">Is the complexity mainly in the UI?</p>
+            <p class="answer">No</p>
+            <p class="question">Is your app's logic mainly server-side?</p>
+            <p class="answer">No</p>
+            <p class="question">Does it need to work on more than one platform?</p>
+            <p class="answer">Yes</p>
+            <p><img src="images/calatrava-logo.svg" alt="Calatrava Logo Lockup" /></p>
+          </figure>
+        </article>
+        <hr>
+
       </section>
 
     <footer>
